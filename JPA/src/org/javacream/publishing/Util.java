@@ -86,7 +86,7 @@ public class Util {
 			entityManager.persist(publisher);
 			publishers[i] = publisher;
 			for (int j = 0; j < booksSize; j++) {
-				Book book = new Book(new Isbn(i, j, 3, 4), "a simple book");
+				Book book = new Book(new Isbn(i, j, 3, 4), "Title" + i + j);
 				book.setPages(200 + j);
 				book.setPrice(9.95 * j);
 				BookStatistics bookStatistics = new BookStatistics(50 * j,

@@ -19,5 +19,11 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="TOOLS/mysql/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="var" path="JPA/jpa-metamodel-generator/hibernate-jpamodelgen-4.3.5.Final.jar"/>
+	<classpathentry kind="src" path="generated/metamodel">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

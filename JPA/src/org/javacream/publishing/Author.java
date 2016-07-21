@@ -18,10 +18,16 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 
 @Entity
 @Table(name = "AUTHORS")
 public class Author implements Serializable {
+
+	protected Author() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	private static final long serialVersionUID = 1L;
 
@@ -29,6 +35,9 @@ public class Author implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long authorId;
 
+	@Version
+	private Long authorVersion;
+	
 	@Transient
 	private List<String> givenNames;
 
@@ -106,7 +115,9 @@ public class Author implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Author: id=" + authorId + ", name=" + givenNameString;
+		return "Author [authorId=" + authorId + ", authorVersion="
+				+ authorVersion + ", givenNames=" + givenNames + ", lastname="
+				+ lastname + "]";
 	}
 
 	public String getLastname() {

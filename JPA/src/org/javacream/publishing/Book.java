@@ -42,7 +42,7 @@ public class Book implements Serializable {
 
 	private int pages;
 
-	@Column(precision = 2, scale = 2)
+	//@Column(precision = 2, scale = 2)
 	private double price;
 
 	@Transient

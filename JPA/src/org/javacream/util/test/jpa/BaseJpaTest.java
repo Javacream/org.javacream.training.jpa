@@ -14,7 +14,7 @@ public class BaseJpaTest {
 	protected static EntityManagerFactory entityManagerFactory;
 	protected EntityTransaction transaction;
 	@BeforeClass public static void setUpEntityManager(){
-		entityManagerFactory = Persistence.createEntityManagerFactory("JPA");
+		entityManagerFactory = Persistence.createEntityManagerFactory("JPA_MySQL");
 		
 	}
 	
